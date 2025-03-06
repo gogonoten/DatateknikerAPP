@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data & Kommunikation</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Forsiden / countdown -->
+    <div id="forside">
+        <h1>Velkommen til Data & Kommunikation uddannelsen</h1>
+        <p>Din rejse begynder her...</p>
+        <p id="countdown">Starter om <span id="timer">10</span> sekunder</p>
+        <button id="skipButton">Fortsæt</button>
+    </div>
+
+    <!-- Hovedsiden -->
+    <div id="main-content" class="hidden">
+        <h1>Vejen til IT-Supporter; Datatekniker m speciale i Infrastruktur/programmering:</h1>
+
+        <div class="progress-bar">
+            <div class="progress-bar-filled" id="progress-bar"></div>
+        </div>
+
+        <button onclick="navigate(1)">Starter du direkte efter folkeskolen?</button>
+        <button onclick="navigate(2)">Er det mere end et år siden?</button>
+        <button onclick="navigate(3)">Er du fyldt 25 år?</button>
+
+        <!-- Skabeloner for hver sektion -->
+        <template id="gf1-template">
+            <p><strong>Beskrivelse:</strong> Du skal starte på GF1. Du vil blive undervist i Dansk, matematik og blive introduceret til flere tekniske uddannelser, inden du endeligt vælger, om du vil fortsætte inden for Data eller fx blive elektriker.</p>
+            <p><strong>Varighed:</strong> 0.5 år</p>
+            <button onclick="gf2()">Fortsæt</button>
+        </template>
+
+        <template id="gf2-template">
+            <p><strong>Beskrivelse:</strong> Du skal starte på GF2. Her vil du blive eksponeret for IT-Teknologi, netværk, programmering og kundesupport.</p>
+            <p><strong>RKV:</strong> Da du er over 25 år, skal du have en Realkompetencevurdering (RKV) efter ansøgning.</p>
+            <p><strong>Økonomi:</strong> Du kan ansøge om SU eller få elevløn, hvis du har en uddannelsesaftale.</p>
+            <p><strong>Varighed:</strong> 0.5 år</p>
+            <button onclick="chooseSpecialization()">Fortsæt</button>
+        </template>
+
+        <template id="specialization-template">
+            <p><strong>Vælg din specialisering:</strong></p>
+            <button onclick="chooseProgramming()">Programmering</button>
+            <button onclick="chooseITSupport()">IT-Supporter/Infrastruktur</button>
+        </template>
+
+        <template id="programming-template">
+            <h2>Programmering</h2>
+            <p><strong>Beskrivelse:</strong> Du lærer at udvikle software, skrive kode og lave applikationer. Her lærer du bl.a. Java, Python, C# og mere.</p>
+            <p><strong>Økonomi:</strong> Elevløn</p>
+            <p><strong>Varighed:</strong> 4.5 år</p>
+            <button onclick="showSummary('Datatekniker med speciale i programmering')">Fortsæt</button>
+        </template>
+
+        <template id="it-supporter-template">
+            <h2>IT-Supporter</h2>
+            <p><strong>Beskrivelse:</strong> Du arbejder med IT-systemer, support og fejlfinding.</p>
+            <p><strong>Økonomi:</strong> Elevløn</p>
+            <p><strong>Varighed:</strong> 2 år</p>
+            <p><strong>Videreuddannelse:</strong> Efter IT-Supporter kan du fortsætte som Datatekniker med speciale i infrastruktur.</p>
+            <button onclick="chooseInfrastructure()">Fortsæt til Infrastruktur</button>
+            <button onclick="showSummary('IT-Supporter')">Nej, afslut</button>
+        </template>
+
+        <template id="infrastructure-template">
+            <h2>Datatekniker med speciale i infrastruktur</h2>
+            <p><strong>Beskrivelse:</strong> Du lærer om netværk, serveradministration og komplekse IT-løsninger.</p>
+            <p><strong>Økonomi:</strong> Elevløn</p>
+            <p><strong>Varighed:</strong> 2.5 år</p>
+            <button onclick="showSummary('Datatekniker med speciale i infrastruktur')">Fortsæt</button>
+        </template>
+
+        <div id="content"></div>
+    </div>
+</body>
+</html>

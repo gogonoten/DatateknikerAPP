@@ -1,0 +1,191 @@
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
+    color: white; 
+    text-align: center;
+    padding: 50px 0;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Container til indholdet */
+.container {
+    background-color: #fff; 
+    color: #333; 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Titler og overskrifter */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; 
+    color: #2575fc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Knapper */
+button {
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff4b5c; 
+    color: white;
+    border-radius: 50px; /* Rund kant */
+    transition: all 0.3s ease; /* Overgang for hover */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+    button:hover {
+        background-color: #ff1f3f; 
+        transform: scale(1.05); /*Animation når man hover */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Skygge på hover */
+    }
+
+    button:focus {
+        outline: none;
+        box-shadow: 0px 0px 8px #2575fc; 
+    }
+
+/* Links */
+a {
+    color: #ff4b5c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #2575fc;
+    }
+
+/* Beskrivelse og tekst */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Progressbar container */
+.progress-bar {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Selve progressbaren */
+.progress-bar-filled {
+    height: 20px;
+    width: 0%;
+    background-color: #4CAF50; 
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Responsivt design */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* Forside-style */
+#forside {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Nedtælling-style */
+#countdown {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Fortsæt knap på forside */
+#skipButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#skipButton:hover {
+    background-color: #ff1f3f;
+}
+
+/* Skjuler hovedsiden indtil nedtælleren rammer 0 - Eller der er trykket 'Fortsæt' */
+.hidden {
+    display: none;
+}
+
+/* Fade-out animation til forside -> hovedside */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Fade-in animation forside -> hovedside */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    background: linear-gradient(135deg, #007bff, #0066ff); /* Blå gradient */
+    color: white;             /* Hvid tekst */
+    padding: 15px 20px;       /* Luft omkring teksten */
+    text-align: center;       /* Centreret tekst */
+    border-radius: 10px;      /* Runde hjørner */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Let skygge */
+}
