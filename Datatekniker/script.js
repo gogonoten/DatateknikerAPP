@@ -11,15 +11,15 @@ function updateProgressBar() {
     if (progressBar) {
         // Dynamisk justering af maxTid afhængig af valget
         let percentage = (totalTid / maxTid) * 100;
-        // let array = [0, 25, 50, 75, 100, 111];
+        let array = [0, 25, 50, 75, 100, 111];
 
-        // for (var i = 0; i < 5; i++) {
-        //     array[i]++;
-        // }
+        for (var i = 0; i < 5; i++) {
+            array[i]++;
+        }
 
-        // array.forEach(function (element) { console.log(element); });
+        array.forEach(function (element) { console.log(element); });
 
-        // forEach(array, function (element) { console.log(element); });
+        forEach(array, function (element) { console.log(element); });
 
         progressBar.style.width = percentage + '%';
     }
